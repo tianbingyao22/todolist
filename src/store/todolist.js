@@ -9,7 +9,7 @@ export default {
   },
   mutations: {
     addTest(state, name) {
-      const id = state.data[0].id + 1
+      const id = state.data[0]?.id + 1 || 1
       state.data.unshift({
         name,
         done: false,
